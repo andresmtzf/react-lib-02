@@ -1,6 +1,6 @@
 {
   "name": "react-lib",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "libreria de ejemplo de react",
   "scripts": {
     "rollup": "rollup -c"
