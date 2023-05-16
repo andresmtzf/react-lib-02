@@ -2,11 +2,8 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
-//import postcss from 'rollup-plugin-postcss'
 import sass from 'rollup-plugin-sass'
 import packageJson from './package.json' assert { type: 'json' }
-
-//const packageJson = require('./package.json')
 
 export default [
   {
@@ -27,15 +24,15 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
-      //postcss(),
+      //sass(),
       sass({ insert: true }),
-      commonjs({ esModuleInterop: true }),
+      //commonjs({ esModuleInterop: true }),
     ],
   },
   {
     input: 'dist/esm/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
-    external: [/\.scss$/],
+    external: [/\.scss$/, 'react', 'react-dom'],
   },
 ]

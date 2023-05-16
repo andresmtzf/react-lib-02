@@ -1,11 +1,18 @@
 {
-  "name": "a-react-lib",
-  "version": "1.0.9",
-  "description": "libreria de ejemplo de react",
+  "name": "andres-react-lib",
+  "version": "1.0.0",
+  "description": "Otro ejemplo de libreria de react",
   "scripts": {
     "rollup": "rm -rf dist/ && rollup -c"
   },
-  "author": "AMF",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "keywords": [],
+  "author": "Andres Mtz",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.0",
@@ -14,18 +21,15 @@
     "@types/react": "^18.2.6",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
-    "rollup": "^3.21.7",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.21.8",
     "rollup-plugin-dts": "^5.3.0",
-    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-sass": "^1.12.19",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
-  "types": "dist/index.d.ts",
-  "type": "module"
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }

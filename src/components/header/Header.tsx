@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '../button/Button'
 import './Header.scss'
 
-export interface Props {
+export interface HeaderProps {
   user: {
     name: string
   }
@@ -11,10 +11,10 @@ export interface Props {
   onCreateAccount: Function
 }
 
-const Header = ({ user, onLogin, onLogout, onCreateAccount }: Props) => {
+const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => {
   return (
     <header>
-      <div className='storybook-header'>
+      <div className='header'>
         <div>
           <svg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'>
             <g fill='none' fillRule='evenodd'>
@@ -38,7 +38,7 @@ const Header = ({ user, onLogin, onLogout, onCreateAccount }: Props) => {
           {user ? (
             <>
               <span className='welcome'>
-                Welcome, <b>{user.name}</b>!
+                Bienvenido, <b>{user.name}</b>!
               </span>
               <Button
                 size='small'
